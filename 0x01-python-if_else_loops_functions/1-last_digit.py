@@ -5,12 +5,14 @@ print("Last digit of", number, "is", end=" ")
 absolute = abs(number)
 last_digit = absolute % 10
 if number < 0:
-    print(-last_digit, end=" ")
+    last_digitmod = -last_digit
+    print(last_digitmod, end=" ")
 else:
-    print(last_digit, end=" ")
-if last_digit > 5:
+    last_digitmod = last_digit
+    print(last_digitmod, end=" ")
+if last_digitmod > 5:
     print("and is greater than 5")
-elif last_digit == 0:
+elif last_digitmod == 0:
     print("and is 0")
-elif last_digit < 6 and not 0:
+elif last_digitmod < 6 and not 0:
     print("and is less than 6 and not 0")
