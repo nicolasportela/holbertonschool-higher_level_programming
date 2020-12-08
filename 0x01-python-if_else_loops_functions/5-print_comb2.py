@@ -1,8 +1,7 @@
 #!/usr/bin/python3
-for n in range(0, 10):
-    print("0{:d}, ".format(n), end="")
-for n in range(10, 100):
-    if n < 99:
-        print("{:d}, ".format(n), end="")
-    elif n == 99:
-        print("{:d}".format(n))
+for n in range(48, 58):
+    for nn in range(48, 58):
+        if n == 57 and nn == 57:
+            print("{:c}{:c}".format(n, nn))
+        else:
+            print("{:c}{:c}, ".format(n, nn), end="")
