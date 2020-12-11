@@ -20,6 +20,6 @@ if __name__ == "__main__":
                 res = sub(ai, bi)
             elif argv[2] is "*":
                 res = mul(ai, bi)
-            else:
+            elif argv[2] is "/":
                 res = div(ai, bi)
             print("{:d} {} {:d} = {:d}".format(ai, argv[2], bi, res))
