@@ -1,4 +1,4 @@
-##0x03. Python - Data Structures: Lists, Tuples
+## 0x03. Python - Data Structures: Lists, Tuples
 
 * Why Python programming is awesome
 * What are lists and how to use them
