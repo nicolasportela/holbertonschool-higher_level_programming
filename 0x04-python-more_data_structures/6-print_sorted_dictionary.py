@@ -1,4 +1,5 @@
 #!/usr/bin/paython3
 def print_sorted_dictionary(a_dictionary):
-    for i in sorted(a_dictionary.keys()):
-        print("{:s}".format(i))
+    sor = sorted(a_dictionary.keys())
+    for i in sor:
+        print("{:s}".format(sor))
