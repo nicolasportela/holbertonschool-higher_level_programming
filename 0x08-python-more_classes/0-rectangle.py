@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """
 This module
-write a class
+writes a class
 that defines a rectangle
 """
 
