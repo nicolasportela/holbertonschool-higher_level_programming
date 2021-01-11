@@ -5,6 +5,7 @@ writes a class
 that defines a rectangle
 """
 
+
 class Rectangle:
     """based on 0-rectangle.py"""
     def __init__(self, width=0, height=0):
