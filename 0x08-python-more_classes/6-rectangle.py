@@ -11,6 +11,7 @@ class Rectangle:
     number_of_instances = 0
 
     def number_of_instances:
+        """how many instances"""
         Rectangle.number_of_instances = Rectangle.number_of_instances + 1
 
     def __init__(self, width=0, height=0):
