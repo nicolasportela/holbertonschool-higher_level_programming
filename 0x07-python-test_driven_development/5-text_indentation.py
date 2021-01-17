@@ -7,6 +7,15 @@ after any of these characters: ., ? and :
 
 
 def text_indentation(text):
+    """The function takes a string and prints it, replacing each period (.),
+    double colon (:) and question mark (?) for two empty lines.
+
+    Args:
+        text (str): text to be printed
+
+    Raises:
+        TypeError: when text is not a string"""
+
     if type(text) is not str:
         raise TypeError("text must be a string")
 
