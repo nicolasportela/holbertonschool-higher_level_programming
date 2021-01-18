@@ -14,19 +14,12 @@ def add_integer(a, b=98):
         raise TypeError("a must be an integer")
     if type(a) is bool:
         raise TypeError("a must be an integer")
-
+    if a is None:
+        raise TypeError("a must be an integer")
     if type(b) is not int and type(b) is not float:
         raise TypeError("b must be an integer")
     if type(b) is bool:
         raise TypeError("b must be an integer")
-
-    if type(a) is float('nan'):
-        a = 0
-    else:
-        a = int(a)
-    if type(b) is float('nan'):
-        b = 0
-    else:
-        b = int(b)
-
-    return a + b
+    if b is None:
+        raise TypeError("b must be an integer")
+    return int(a) + int(b)
