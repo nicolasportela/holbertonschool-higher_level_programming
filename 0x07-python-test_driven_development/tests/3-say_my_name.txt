@@ -3,9 +3,6 @@
 >>> say_my_name("Nico", "Portela")
 My name is Nico Portela
 
->>> say_my_name("Nico")
-My name is Nico
-
 >>> say_my_name(13, "Algo")
 Traceback (most recent call last):
     ...
