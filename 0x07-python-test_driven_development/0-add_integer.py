@@ -7,7 +7,9 @@ or raises TypeError if any of them are not int or float.
 
 
 def add_integer(a, b=98):
-    """adds 2 integers"""
+    """
+    adds 2 integers
+    """
     if type(a) is not int and type(a) is not float:
         raise TypeError("a must be an integer")
     if type(a) is bool:
@@ -26,5 +28,5 @@ def add_integer(a, b=98):
         b = 0
     else:
         b = int(b)
-    
+
     return a + b
