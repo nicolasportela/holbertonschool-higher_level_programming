@@ -51,3 +51,15 @@ TypeError: print_square() takes 1 positional argument but 2 were given
 Traceback (most recent call last):
 ...
 NameError: name 'a' is not defined
+
+>>> print_square(10)
+##########
+##########
+##########
+##########
+##########
+##########
+##########
+##########
+##########
+##########
