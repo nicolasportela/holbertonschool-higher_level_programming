@@ -6,11 +6,6 @@
 >>> add_integer(9, -2)
 7
 
->>> add_integer(None)
-Traceback (most recent call last):
-    ...
-TypeError: a must be an integer
-
 >>> add_integer(1, 3.4)
 4
 
@@ -25,7 +20,7 @@ TypeError: b must be an integer
 >>> add_integer(None)
 Traceback (most recent call last):
     ...
-TypeError: a must be an integer
+ValueError
 
 >>> add_integer("Test")
 Traceback (most recent call last):
