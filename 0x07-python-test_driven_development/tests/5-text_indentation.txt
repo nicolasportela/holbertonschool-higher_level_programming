@@ -6,6 +6,9 @@ Hola.
 Como Estas?
 <BLANKLINE>
 
+>>> text_indentation("Holberton School")
+Holberton School
+
 >>> text_indentation("Holberton. School? How are you: John")
 Holberton.
 <BLANKLINE>
@@ -21,6 +24,12 @@ Holberton.
 School
 
 >>> text_indentation("Hola")
+Hola
+
+>>> text_indentation(" Hola")
+Hola
+
+>>> text_indentation("Hola ")
 Hola
 
 >>> text_indentation(13)
