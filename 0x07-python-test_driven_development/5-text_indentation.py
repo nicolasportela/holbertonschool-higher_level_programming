@@ -23,7 +23,7 @@ def text_indentation(text):
             if n_l[i + 1] == " ":
                 n_l[i + 1] = '\n\n'
             else:
-                n_l[(i + 1):(i + 1)] = '\n\n'
+                n_l[(i + 1):(i + 1)] = '\n'
     n_t = ""
     n_t = n_t.join(n_l)
     print("{}".format(n_t), end="")
