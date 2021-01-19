@@ -17,13 +17,13 @@ def text_indentation(text):
     if type(text) is not str:
         raise TypeError("text must be a string")
 
-    n_l = list(text)
-    for i in range(len(n_l)):
-        if n_l[i] is "." or n_l[i] is "?" or n_l[i] is ":":
-            if n_l[i + 1] == " ":
-                n_l[i + 1] = '\n\n'
+    newlist = list(text)
+    for i in range(len(newlist)):
+        if newlist[i] is "." or newlist[i] is "?" or newlist[i] is ":":
+            if newlist[i + 1] == " ":
+                newlist[i + 1] = '\n\n'
             else:
-                n_l[(i + 1):(i + 1)] = '\n'
-    n_t = ""
-    n_t = n_t.join(n_l)
-    print("{}".format(n_t), end="")
+                newlist[(i + 1):(i + 1)] = '\n\n'
+    newtext = ""
+    newtext = newtext.join(newlist)
+    print("{}".format(newtext), end="")
