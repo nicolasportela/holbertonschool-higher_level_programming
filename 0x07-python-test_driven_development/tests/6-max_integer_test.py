@@ -10,6 +10,18 @@ class TestMaxInteger(unittest.TestCase):
         """test with a list of ints"""
         self.assertEqual(max_integer([1, 2, 8, 4]), 8)
 
+    def test_beg(self):
+        """test for max at the beginning"""
+        self.assertEqual(max_integer([4, 3, 2, 1]), 4)
+
+    def test_end(self):
+        """test for max at the end"""
+        self.assertEqual(max_integer([1, 2, 3, 4], 4)
+
+    def test_one(self):
+        """test for list of one element"""
+        self.assertEqual(max_integer([4], 4)
+
     def test_empty(self):
         """test an empty list"""
         self.assertIsNone(max_integer([]))
