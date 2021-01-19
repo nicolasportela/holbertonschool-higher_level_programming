@@ -19,17 +19,7 @@ def text_indentation(text):
 
     n_l = list(text)
     for i in range(len(n_l)):
-        if n_l[i] is ".":
-            if n_l[i + 1] == " ":
-                n_l[i + 1] = '\n\n'
-            else:
-                n_l[(i + 1):(i + 1)] = '\n\n'
-        if n_l[i] is "?":
-            if n_l[i + 1] == " ":
-                n_l[i + 1] = '\n\n'
-            else:
-                n_l[(i + 1):(i + 1)] = '\n\n'
-        if n_l[i] is ":":
+        if n_l[i] is "." or n_l[i] is "?" or n_l[i] is ":":
             if n_l[i + 1] == " ":
                 n_l[i + 1] = '\n\n'
             else:
