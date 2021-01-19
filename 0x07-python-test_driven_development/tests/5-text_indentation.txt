@@ -26,6 +26,12 @@ School
 >>> text_indentation("Hola")
 Hola
 
+>>> text_indentation(" Hola")
+Hola
+
+>>> text_indentation("Hola ")
+Hola
+
 >>> text_indentation(13)
 Traceback (most recent call last):
     ...
