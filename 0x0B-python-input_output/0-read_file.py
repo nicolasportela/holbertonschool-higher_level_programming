@@ -6,4 +6,4 @@ def read_file(filename=""):
     """function to read a text file"""
 
     with open(filename, encoding="UTF8") as file:
-        print(file.read())
+        print(file.read(), end="")
