@@ -7,4 +7,4 @@
 def inherits_from(obj, a_class):
 
     """True if it is, False otherwise"""
-    return issubclass(obj, a_class)
+    return issubclass(obj, a_class) and isinstance(obj, a_class)
