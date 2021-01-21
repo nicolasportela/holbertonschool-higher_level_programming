@@ -3,9 +3,6 @@
 the dictionary description with a simple data structure"""
 
 
-import json
-
-
 def class_to_json(obj):
     """function"""
 
