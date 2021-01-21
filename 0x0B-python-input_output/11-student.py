@@ -1,8 +1,6 @@
 #!/usr/bin/python3
 """this module writes a class named Student"""
 
-import json
-
 
 class Student:
     """class creation"""
