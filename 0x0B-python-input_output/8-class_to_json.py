@@ -9,4 +9,4 @@ import json
 def class_to_json(obj):
     """function"""
 
-    return obj.__dict()
+    return obj.__dict__
