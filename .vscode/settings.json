@@ -1,0 +1,14 @@
+{
+    "editor.renderLineHighlight": "all",
+    "editor.renderWhitespace": "boundary",
+    "editor.semanticHighlighting.enabled": true,
+    "editor.smoothScrolling": true,
+    "editor.find.loop": false,
+    "editor.find.seedSearchStringFromSelection": false,
+    "diffEditor.ignoreTrimWhitespace": false,
+    "editor.suggest.shareSuggestSelections": true,
+    "git.supportCancellation": true,
+    "markdown.links.openLocation": "beside",
+    "markdown.preview.breaks": true,
+    "python.autoComplete.addBrackets": true
+}
