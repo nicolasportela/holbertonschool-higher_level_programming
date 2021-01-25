@@ -1,6 +1,10 @@
 #!/usr/bin/python3
 """This module contains the base class of all other classes in this project."""
 
+
+import json
+
+
 class Base:
     """parent class"""
 
@@ -14,3 +18,49 @@ class Base:
         else:
             Base.__nb_objects += 1
             self.id = Base.__nb_objects
+
+    @staticmethod
+    def to_json_string(list_dictionaries):
+        """returns the JSON string representation of list_dictionaries"""
+
+        if list_dictionaries is None or len(list_dictionaries) == 0:
+            return []
+        else:
+            return json.dumps(list_dictionaries)
+    
+    @classmethod
+    def save_to_file(cls, list_objs):
+        """writes the JSON string representation of list_objs to a file"""
+
+        filename = cls.__name__ + '.json'
+        myList = []
+        with open(filename, mode='w', encoding='utf-8') as myFile:
+            if list_objs is None:
+                myFile.write(cls.to_json_string(myList))
+            else:
+                for obj in list_objs:
+                    myList.append(obj.to_dictionary())
+                myFile.write(cls.to_json_string(myList))
+
+    @staticmethod
+    def from_json_string(json_string):
+        """returns the list of the JSON string representation"""
+
+        if json_string is None or len(json_string) == 0:
+            return []
+        else:
+            return json.loads(json_string)
+
+    @classmethod
+    def create(cls, **dictionary):
+        """returns an instance with all attributes already set"""
+
+        sq_dummy = cls(4,3,2,1)
+        cls.update(sq_dummy, **dictionary)
+        return sq_dummy
+
+    @classmethod
+    def load_from_file(cls):
+        """returns a list of instances"""
+
+    

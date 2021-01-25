@@ -11,10 +11,10 @@ class Rectangle(Base):
     def __init__(self, width, height, x=0, y=0, id=None):
         """class constructor"""
 
-        self.__width = width
-        self.__height = height
-        self.__x = x
-        self.__y = y
+        self.width = width
+        self.height = height
+        self.x = x
+        self.y = y
         self.id = id
         super().__init__(self.id)
 
@@ -105,3 +105,20 @@ class Rectangle(Base):
 
         s = "[Rectangle] ({:d}) {:d}/{:d} - {:d}/{:d}".format(self.id, self.__x, self.__y, self.__width, self.__height)
         return s
+
+    def update(self, *args, **kwargs):
+        """assigns a key/value argument to attributes"""
+
+        list_attr = ["id", "width", "height", "x", "y"]
+        if args and len(args) > 0:
+            for i in range(len(args)):
+                setattr(self, list_attr[i], args[i])
+        else:
+            for key, value in kwargs.items():
+                setattr(self, key, value)
+
+    def to_dictionary(self):
+        """returns the dictionary representation of a Rectangle"""
+
+        rect_dict = {"id":self.id, "width":self.__width, "height":self.__height, "x":self.__x, "y":self.__y}
+        return rect_dict
