@@ -3,14 +3,15 @@
 
 from models.rectangle import Rectangle
 
+
 class Square(Rectangle):
     """class Square"""
 
     def __init__(self, size, x=0, y=0, id=None):
         """class constructor"""
-        
+
         super().__init__(size, size, x, y, id)
-    
+
     @property
     def size(self):
         """size getter"""
@@ -27,7 +28,7 @@ class Square(Rectangle):
             raise ValueError("width must be > 0")
         self.width = size
         self.height = size
-    
+
     def __str__(self):
         """overloading string representation"""
 
@@ -48,5 +49,5 @@ class Square(Rectangle):
     def to_dictionary(self):
         """returns the dictionary representation of a Square"""
 
-        square_dict = {"id":self.id, "size":self.size, "x":self.x, "y":self.y}
+        square_dict = {"id": self.id, "size": self.size, "x": self.x, "y": self.y}
         return square_dict
