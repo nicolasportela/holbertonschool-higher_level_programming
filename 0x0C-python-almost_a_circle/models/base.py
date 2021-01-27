@@ -34,9 +34,9 @@ class Base:
 
         filename = cls.__name__ + '.json'
         myList = []
-        with open(filename, mode='w', encoding='utf-8') as myFile:
+        with open(filename, "w", encoding="UTF8") as myFile:
             if list_objs is None:
-                myFile.write(cls.to_json_string(myList))
+                myFile.write(cls.to_json_string("[]"))
             else:
                 for obj in list_objs:
                     myList.append(obj.to_dictionary())
@@ -51,6 +51,7 @@ class Base:
         else:
             return json.loads(json_string)
 
+    # ARREGLAR ESTO, 18 #
     @classmethod
     def create(cls, **dictionary):
         """returns an instance with all attributes already set"""
@@ -59,6 +60,7 @@ class Base:
         cls.update(sq_dummy, **dictionary)
         return sq_dummy
 
+    # ARREGLAR ESTO, 19 #
     @classmethod
     def load_from_file(cls):
         """returns a list of instances"""
