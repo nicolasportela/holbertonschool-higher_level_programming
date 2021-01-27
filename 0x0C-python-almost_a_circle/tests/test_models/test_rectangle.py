@@ -171,19 +171,6 @@ class TestRectangleDocs(unittest.TestCase):
             ls = [r1.to_dictionary(), r2.to_dictionary()]
             self.assertEqual(json.dumps(ls), f.read())
 
-    def test_stf_empty(self):
-        """test save_to_file with empty list"""
-        l = []
-        Rectangle.save_to_file(l)
-        with open("Rectangle.json", "r") as f:
-            self.assertEqual("[]", f.read())
-
-    def test_stf_None(self):
-        """test save_to_file with None"""
-        Rectangle.save_to_file(None)
-        with open("Rectangle.json", "r") as f:
-            self.assertEqual("[]", f.read())
-
     def test_create(self):
         """test normal use of create"""
         r1 = {"id": 2, "width": 2, "height": 3, "x": 4, "y": 0}

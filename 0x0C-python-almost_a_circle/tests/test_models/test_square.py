@@ -170,19 +170,6 @@ class TestSquareDocs(unittest.TestCase):
             ls = [s1.to_dictionary(), s2.to_dictionary()]
             self.assertEqual(json.dumps(ls), f.read())
 
-    def test_stf_empty(self):
-        """test save_to_file with empty list"""
-        l = []
-        Square.save_to_file(l)
-        with open("Square.json", "r") as f:
-            self.assertEqual("[]", f.read())
-
-    def test_stf_None(self):
-        """test save_to_file with None"""
-        Square.save_to_file(None)
-        with open("Square.json", "r") as f:
-            self.assertEqual("[]", f.read())
-
     def test_create(self):
         """test normal use of create"""
         s1 = {"id": 2, "size": 3, "x": 4, "y": 0}
