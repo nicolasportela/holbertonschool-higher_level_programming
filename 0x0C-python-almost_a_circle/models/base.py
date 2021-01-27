@@ -37,7 +37,7 @@ class Base:
         myList = []
         with open(filename, "w", encoding="UTF8") as myFile:
             if list_objs is None:
-                myFile.write(cls.to_json_string())
+                myFile.write(myList)
             else:
                 for obj in list_objs:
                     myList.append(obj.to_dictionary())
