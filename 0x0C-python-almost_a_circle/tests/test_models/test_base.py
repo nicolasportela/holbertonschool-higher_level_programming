@@ -67,18 +67,6 @@ class TestBase(unittest.TestCase):
         d = json.loads(json_s)
         self.assertEqual(d, [d1, d2])
 
-    def test_empty_to_json_string(self):
-        """Test for passing empty list"""
-        json_s = Base.to_json_string([])
-        self.assertTrue(type(json_s) is str)
-        self.assertEqual(json_s, "[]")
-
-    def test_None_to_json_String(self):
-        """Test for passing None"""
-        json_s = Base.to_json_string(None)
-        self.assertTrue(type(json_s) is str)
-        self.assertEqual(json_s, "[]")
-
     def test_from_json_string(self):
         """Tests regular from_json_string"""
         json_str = '[{"id": 9, "width": 5, "height": 6, "x": 7, "y": 8}, \
