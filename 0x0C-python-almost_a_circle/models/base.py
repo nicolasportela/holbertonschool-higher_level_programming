@@ -28,7 +28,7 @@ class Base:
         else:
             return json.dumps(list(list_dictionaries))
 
-    # ARREGLAR ESTO, 16 #
+    # Fix needed, task 16 #
     @classmethod
     def save_to_file(cls, list_objs):
         """writes the JSON string representation of list_objs to a file"""
@@ -37,11 +37,11 @@ class Base:
         myList = []
         with open(filename, "w", encoding="UTF8") as myFile:
             if list_objs is None:
-                myFile.write(myList)
+                return myFile.write("")
             else:
                 for obj in list_objs:
                     myList.append(obj.to_dictionary())
-                myFile.write(cls.to_json_string(myList))
+                return myFile.write(cls.to_json_string(myList))
 
     @staticmethod
     def from_json_string(json_string):
@@ -52,7 +52,7 @@ class Base:
         else:
             return json.loads(json_string)
 
-    # ARREGLAR ESTO, 18 #
+    # Fix needed, task 18 #
     @classmethod
     def create(cls, **dictionary):
         """returns an instance with all attributes already set"""
@@ -61,7 +61,7 @@ class Base:
         cls.update(sq_dummy, **dictionary)
         return sq_dummy
 
-    # ARREGLAR ESTO, 19 #
+    # Fix needed, task 19 #
     @classmethod
     def load_from_file(cls):
         """returns a list of instances"""
