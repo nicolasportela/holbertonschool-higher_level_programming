@@ -32,7 +32,12 @@ class Square(Rectangle):
     def __str__(self):
         """overloading string representation"""
 
-        s = "[Square] ({:d}) {:d}/{:d} - {:d}".format(self.id, self.x, self.y, self.size)
+        s = "[Square] ({:d}) {:d}/{:d} - {:d}".format(
+                                                    self.id,
+                                                    self.x,
+                                                    self.y,
+                                                    self.size
+                                                    )
         return s
 
     def update(self, *args, **kwargs):
@@ -49,5 +54,10 @@ class Square(Rectangle):
     def to_dictionary(self):
         """returns the dictionary representation of a Square"""
 
-        square_dict = {"id": self.id, "size": self.size, "x": self.x, "y": self.y}
+        square_dict = {
+                    "id": self.id,
+                    "size": self.size,
+                    "x": self.x,
+                    "y": self.y
+                    }
         return square_dict
