@@ -1,4 +1,5 @@
 -- lists all shows that have at least one genre linked
+
 SELECT tv_shows.title, tv_shows_genres.genre_id
 FROM tv_shows_genres
 INNER JOIN tv_shows
