@@ -1,7 +1,7 @@
 #!/usr/bin/node
 const arg = [];
 let i;
-let str = 'X';
+const str = 'X';
 process.argv.forEach((val, index) => {
   arg[index] = `${val}`;
 });
