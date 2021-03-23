@@ -6,6 +6,7 @@ module.exports = class Rectangle {
       this.height = h;
     }
   }
+
   print () {
     let i;
     const str = 'X';
