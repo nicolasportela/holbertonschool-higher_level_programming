@@ -4,15 +4,12 @@ module.exports = class Square extends Square1 {
   charPrint (c) {
     let i;
     const str = 'C';
-    const str2 = 'X';
-    if (c === undefined) {
-      for (i = 0; i < this.width; i++) {
-        console.log(str2.repeat(this.height));
-      }
-    } else {
+    if (c) {
       for (i = 0; i < this.width; i++) {
         console.log(str.repeat(this.height));
-      }
+      } 
+    } else {
+      this.print();
     }
   }
 }
