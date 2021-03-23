@@ -5,13 +5,13 @@ module.exports = class Square extends Square1 {
     let i;
     const str = 'C';
     const str2 = 'X';
-    if (c) {
+    if (c === undefined) {
       for (i = 0; i < this.width; i++) {
-        console.log(str.repeat(this.height));
+        console.log(str2.repeat(this.height));
       }
     } else {
       for (i = 0; i < this.width; i++) {
-        console.log(str2.repeat(this.height));
+        console.log(str.repeat(this.height));
       }
     }
   }
