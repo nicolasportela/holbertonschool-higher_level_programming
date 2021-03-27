@@ -16,7 +16,8 @@ if __name__ == "__main__":
         LIKE '{:s}' ORDER BY id ASC".format(argv[4]))
         rows = cur.fetchall()
         for r in rows:
-            print(r)
+            if r[1] == argv[4]:
+                print(r)
         cur.close()
         db.close()
     except Exception as e:
