@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""script that lists all State objects from the database hbtn_0e_6_usa"""
+"""script that prints first State object from the database hbtn_0e_6_usa"""
 
 if __name__ == "__main__":
     from sys import argv
@@ -15,6 +15,9 @@ if __name__ == "__main__":
 
     Session = sessionmaker(bind=engine)
     session = Session()
-    for states in session.query(State):
-        print("{}: {}".format(states.id, states.name))
+    first = session.query(State).first()
+    if first:
+        print("{}: {}".format(first.id, first.name))
+    else:
+        print("Nothing")
     session.close()
