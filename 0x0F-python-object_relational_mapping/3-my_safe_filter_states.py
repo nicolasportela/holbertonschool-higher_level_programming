@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-""" script that lists all states from the database hbtn_0e_0_usa """
+""" python script that lists all states from the database hbtn_0e_0_usa with a
+given name and is safe from MySQL injections """
 
 if __name__ == "__main__":
     from sys import argv
@@ -12,7 +13,7 @@ if __name__ == "__main__":
         db = MySQLdb.\
             connect(host=MY_HOST, user=MY_USER, passwd=MY_PASS, db=MY_DB)
         cur = db.cursor()
-        cur.execute("SELECT * FROM states ORDER BY id ASC")
+        cur.execute("SELECT * FROM states WHERE name LIKE %s ORDER BY id ASC", (argv[4],))
         rows = cur.fetchall()
         for r in rows:
             print(r)
