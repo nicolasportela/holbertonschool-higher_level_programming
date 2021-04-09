@@ -16,4 +16,4 @@ if __name__ == "__main__":
     req = urllib.request.Request(url, data)
     with urllib.request.urlopen(req) as response:
         the_page = response.read()
-        print("Your email is: {}".format(sys.argv[2]))
+        print(the_page)
