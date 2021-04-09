@@ -12,7 +12,7 @@ if __name__ == "__main__":
     values = {'email': sys.argv[2]}
 
     data = urllib.parse.urlencode(values)
-    data = data.encode('utf8') # data should be bytes
+    data = data.encode('utf8')
     req = urllib.request.Request(url, data)
     with urllib.request.urlopen(req) as response:
         the_page = response.read()
