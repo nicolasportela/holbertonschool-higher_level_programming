@@ -6,10 +6,10 @@ if __name__ == "__main__":
     import requests
     import sys
 
-    if len(argv) > 1:
-        letter = argv[1]
-    else:
+    if not argv[1]:
         letter = ""
+    else:
+        letter = sys.argv[1]
     dic = {'q': letter}
     r = requests.post("http://0.0.0.0:5000/search_user", data=dic)
     try:
