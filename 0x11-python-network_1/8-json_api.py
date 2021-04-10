@@ -6,16 +6,16 @@ if __name__ == "__main__":
     import requests
     import sys
 
-    if not argv[1]:
-        letter = ""
-    else:
+    if len(sys.argv) > 1:
         letter = sys.argv[1]
+    else:
+        letter = ""
     dic = {'q': letter}
     r = requests.post("http://0.0.0.0:5000/search_user", data=dic)
     try:
         result = r.json()
         if 'id' in result and 'name' in result:
-            print("[{}] {}" .format(result['id'], result['name']))
+            print("[{}] {}".format(result['id'], result['name']))
         else:
             print("No result")
     except:
